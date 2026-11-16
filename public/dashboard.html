@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Encanto | Panel</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="dashboard-body">
+  <header class="topbar">
+    <a class="logo-small" href="/dashboard.html"><span>DE</span> Dulce Encanto</a>
+    <div class="top-actions">
+      <span id="userName" class="user-chip">Usuario</span>
+      <button id="logoutBtn" class="logout">Cerrar sesión</button>
+    </div>
+  </header>
+  <main class="dashboard">
+    <p class="eyebrow">PANEL DE CONTROL</p>
+    <h1>¡Hola, <span id="welcomeName">bienvenido/a</span>!</h1>
+    <p class="muted">Este es el espacio de trabajo de tu repostería.</p>
+    <section class="welcome-card">
+      <div>
+        <p class="eyebrow">DULCE ENCANTO</p>
+        <h2>Las mejores ideas<br>comienzan aquí.</h2>
+        <p>Tu acceso está protegido mediante autenticación JWT.</p>
+      </div>
+      <div class="big-cupcake" aria-hidden="true">🧁</div>
+    </section>
+    <div class="section-heading">
+      <div><p class="eyebrow">TU ESPACIO</p><h2>Resumen del sistema</h2></div>
+      <span id="roleBadge" class="role-badge">Empleado</span>
+    </div>
+    <nav class="dashboard-nav" aria-label="Secciones del panel"><a href="#productos">Productos</a><a href="#pedidos">Pedidos</a><a href="#inventario">Inventario</a><a href="#seguridad">Seguridad JWT</a></nav>
+    <section class="tiles">
+      <article id="productos" class="tile"><span class="tile-icon">🍰</span><h3>Productos</h3><p>Próximamente podrás organizar tu catálogo.</p></article>
+      <article id="pedidos" class="tile"><span class="tile-icon">🧾</span><h3>Pedidos</h3><p>Próximamente podrás gestionar pedidos.</p></article>
+      <article id="inventario" class="tile"><span class="tile-icon">📦</span><h3>Inventario</h3><p>Próximamente podrás controlar existencias.</p></article>
+    </section>
+    <section id="seguridad" class="security-card"><span class="security-icon">🔒</span><div><h2>Sesión protegida con JWT</h2><p>La sesión utiliza una cookie HttpOnly. El servidor valida el token antes de mostrar este panel y consultar información privada.</p></div><span class="security-status">Protegida</span></section>
+    <section id="adminPanel" class="admin-panel hidden">
+      <h2>Administración de usuarios</h2>
+      <p class="muted">Esta sección solo está disponible para el rol administrador.</p>
+      <button id="loadUsers" class="secondary">Consultar usuarios</button>
+      <div id="usersResult"></div>
+    </section>
+  </main>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
